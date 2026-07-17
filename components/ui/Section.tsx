@@ -1,0 +1,24 @@
+import type { ElementType, HTMLAttributes, ReactNode } from "react";
+
+import { cn } from "@/utils/cn";
+import { Container } from "@/components/ui/Container";
+
+export type SectionProps = HTMLAttributes<HTMLElement> & {
+  children: ReactNode;
+  containerSize?: "sm" | "md" | "lg" | "full";
+  as?: ElementType;
+};
+
+export function Section({
+  children,
+  className,
+  containerSize = "lg",
+  as: Component = "section",
+  ...props
+}: SectionProps) {
+  return (
+    <Component className={cn("py-16 sm:py-20", className)} {...props}>
+      <Container size={containerSize}>{children}</Container>
+    </Component>
+  );
+}

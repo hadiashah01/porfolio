@@ -1,0 +1,39 @@
+/**
+ * Prisma schema for Phase 1 (structure only).
+ * Client usage and migrations begin in Phase 2.
+ *
+ * Prisma 7 may prefer connection URLs in prisma.config.ts —
+ * DATABASE_URL / DIRECT_URL remain documented in .env.example.
+ */
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum ContactStatus {
+  unread
+  read
+  responded
+  archived
+}
+
+model ContactMessage {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  status    ContactStatus @default(unread)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+  @@map("contact_messages")
+}
