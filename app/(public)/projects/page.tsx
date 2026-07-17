@@ -1,5 +1,8 @@
-import { PlaceholderPage } from "@/components/layout/PlaceholderPage";
+import { Section } from "@/components/ui/Section";
+import { SectionHeading, ProjectCard } from "@/components/sections";
 import { buildMetadata } from "@/config/metadata";
+import { projects } from "@/config/projects";
+import { projectsPageContent } from "@/config/personal";
 
 export const metadata = buildMetadata({
   title: "Projects",
@@ -9,9 +12,19 @@ export const metadata = buildMetadata({
 
 export default function ProjectsPage() {
   return (
-    <PlaceholderPage
-      title="Projects"
-      description="Projects page content will be implemented next in Phase 1."
-    />
+    <Section containerSize="lg" className="pt-20 sm:pt-24">
+      <div className="space-y-8">
+        <SectionHeading
+          eyebrow={projectsPageContent.eyebrow}
+          title={projectsPageContent.title}
+          description={projectsPageContent.description}
+        />
+        <div className="grid gap-6 lg:grid-cols-2">
+          {projects.map((project) => (
+            <ProjectCard key={project.slug} project={project} />
+          ))}
+        </div>
+      </div>
+    </Section>
   );
 }

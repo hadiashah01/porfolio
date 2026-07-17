@@ -29,10 +29,10 @@ export function Footer() {
           ))}
         </nav>
 
-        <div className="space-y-2 text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foregroundspace-y-2 text-sm text-muted-foreground">
           <a
             href={siteConfig.links.github}
-            className="block transition-colors hover:text-foreground"
+            className="transition-colors hover:text-foreground"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -40,7 +40,7 @@ export function Footer() {
           </a>
           <a
             href={siteConfig.links.linkedin}
-            className="block transition-colors hover:text-foreground"
+            className="transition-colors hover:text-foreground"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -48,7 +48,7 @@ export function Footer() {
           </a>
           <a
             href={siteConfig.links.email}
-            className="block transition-colors hover:text-foreground"
+            className=" transition-colors hover:text-foreground"
           >
             Email
           </a>
