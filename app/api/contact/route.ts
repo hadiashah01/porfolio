@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 
 import { prisma } from "@/lib/prisma";
+import { sendContactNotification } from "@/lib/resend";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required"),
@@ -36,6 +37,9 @@ export async function POST(request: Request) {
       },
     });
 
+    // Send email notification (fails gracefully internally, doesn't block the client response on error)
+    await sendContactNotification(contactMessage);
+
     return NextResponse.json(
       {
         message: "Contact message saved successfully",
@@ -54,3 +58,4 @@ export async function POST(request: Request) {
     );
   }
 }
+

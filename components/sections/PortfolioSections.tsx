@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ExternalLink, Github, Mail } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, Mail, Linkedin, Phone } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/Button";
 import {
@@ -142,20 +142,44 @@ type ContactMethodListProps = {
 };
 
 export function ContactMethodList({ methods }: ContactMethodListProps) {
+  const getIcon = (label: string) => {
+    switch (label.toLowerCase()) {
+      case "github":
+        return <Github className="text-primary h-4 w-4" aria-hidden="true" />;
+      case "linkedin":
+        return <Linkedin className="text-primary h-4 w-4" aria-hidden="true" />;
+      case "phone":
+        return <Phone className="text-primary h-4 w-4" aria-hidden="true" />;
+      default:
+        return <Mail className="text-primary h-4 w-4" aria-hidden="true" />;
+    }
+  };
+
   return (
     <ul className="space-y-3">
-      {methods.map((method) => (
-        <li key={method.label}>
-          <a
-            href={method.href}
-            className="border-border bg-surface hover:bg-muted flex items-center justify-between rounded-lg border px-4 py-3 text-sm transition-colors"
-          >
-            <span className="text-foreground font-medium">{method.label}</span>
-            <span className="text-muted-foreground">{method.value}</span>
-            <Mail className="text-primary h-4 w-4" aria-hidden="true" />
-          </a>
-        </li>
-      ))}
+      {methods.map((method) => {
+        const isEmail = method.label.toLowerCase() === "email";
+        const isPhone = method.label.toLowerCase() === "phone";
+        const isExternal = !isEmail && !isPhone;
+        const finalHref = isEmail && !method.href.startsWith("mailto:")
+          ? `mailto:${method.href}`
+          : method.href;
+
+        return (
+          <li key={method.label}>
+            <a
+              href={finalHref}
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
+              className="border-border bg-surface hover:bg-muted flex items-center justify-between rounded-lg border px-4 py-3 text-sm transition-colors"
+            >
+              <span className="text-foreground font-medium">{method.label}</span>
+              <span className="text-muted-foreground">{method.value}</span>
+              {getIcon(method.label)}
+            </a>
+          </li>
+        );
+      })}
     </ul>
   );
 }

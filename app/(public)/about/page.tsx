@@ -7,6 +7,8 @@ import {
   CardTitle,
 } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
+import { buttonVariants } from "@/components/ui/Button";
+import { cn } from "@/utils/cn";
 import { SectionHeading } from "@/components/sections";
 import { buildMetadata } from "@/config/metadata";
 import { aboutPageContent, personal } from "@/config/personal";
@@ -41,6 +43,10 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="border-border text-muted-foreground rounded-md border p-4 text-sm">
+                <p className="text-foreground font-medium">Education</p>
+                <p>{personal.education}</p>
+              </div>
+              <div className="border-border text-muted-foreground rounded-md border p-4 text-sm">
                 <p className="text-foreground font-medium">
                   {aboutPageContent.quickProfileTitle}
                 </p>
@@ -49,6 +55,18 @@ export default function AboutPage() {
               <div className="border-border text-muted-foreground rounded-md border p-4 text-sm">
                 <p className="text-foreground font-medium">Email</p>
                 <p>{personal.email}</p>
+              </div>
+              <div className="pt-2">
+                <a
+                  href={personal.resumePath}
+                  download
+                  className={cn(
+                    buttonVariants({ variant: "outline", size: "sm" }),
+                    "w-full justify-center text-sm font-semibold"
+                  )}
+                >
+                  Download Resume
+                </a>
               </div>
             </CardContent>
           </Card>

@@ -17,17 +17,17 @@ export const projects: Project[] = [
     slug: "portfolio-website",
     title: "Portfolio Website",
     description:
-      "A polished personal portfolio designed to showcase projects, experience, and professional direction.",
+      "A full-stack personal portfolio built with React and Next.js, featuring responsive UI, Supabase-powered contact management, Prisma integration, authentication, and an admin dashboard for managing contact submissions.",
     problem:
-      "A developer portfolio needs to communicate credibility, clarity, and modern design without overwhelming the visitor.",
+      "A personal portfolio needs a secure way to collect contact queries and display dashboard metrics without relying on third-party form providers.",
     solution:
-      "I structured the experience around a clear content hierarchy, reusable components, and responsive sections that keep the narrative simple.",
+      "Built a Next.js full-stack site with a secure Prisma-integrated Supabase database, rate limiting, reCAPTCHA, and a protected dashboard.",
     learnings: [
-      "Design systems make it easier to scale visual consistency",
-      "Strong content hierarchy improves clarity for recruiters and clients",
+      "Implementing Next.js middleware routing guards",
+      "Handling database connections with Prisma 7 adapters",
     ],
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com/hadia/portfolio",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Prisma", "Supabase"],
+    githubUrl: "https://github.com/hadiashah01/portfolio",
     demoUrl: "",
     featured: true,
     image: "/images/projects/portfolio-placeholder.jpg",
@@ -36,39 +36,96 @@ export const projects: Project[] = [
     slug: "user-directory",
     title: "User Directory",
     description:
-      "A directory experience focused on clear content presentation and thoughtful interaction patterns.",
+      "A responsive user directory built with HTML, CSS, Bootstrap, and JavaScript that fetches user data from the JSONPlaceholder API. Features dynamic profile pages, URL parameter routing, loading states, and error handling.",
     problem:
-      "Large collections of user data can become difficult to scan without strong layout and filtering systems.",
+      "Displaying external API directory listings dynamically with smooth routing and proper loading states.",
     solution:
-      "I focused on concise cards, responsive grids, and an interface that reduces friction while maintaining readability.",
+      "Utilized JavaScript and Bootstrap to create layout grids fetching JSONPlaceholder endpoints with error handling.",
     learnings: [
-      "Readable card layouts improve scanning speed",
-      "Small interaction states can make dense data feel approachable",
+      "Working with dynamic URL parameters in routing",
+      "Managing state representation during REST API fetches",
     ],
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
-    githubUrl: "https://github.com/hadia/user-directory",
-    demoUrl: "",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+    githubUrl: "https://github.com/hadiashah01/user-directory",
+    demoUrl: "https://hadiashah01.github.io/user-directory/",
     featured: true,
     image: "/images/projects/user-directory-placeholder.jpg",
   },
   {
-    slug: "kitchen-garden",
-    title: "Kitchen Garden",
+    slug: "bbc-news-homepage-clone",
+    title: "BBC News Homepage Clone",
     description:
-      "A concept product experience for a home gardening and meal-planning workflow.",
+      "A responsive BBC News homepage clone built with HTML, CSS, and JavaScript that displays dynamic news content fetched from an external API while practicing DOM manipulation and responsive layouts.",
     problem:
-      "The experience needed to feel calm and grounded while still being interactive and informative.",
+      "Recreating a content-dense news portal layout that remains fully responsive across all device sizes.",
     solution:
-      "I created a focused UI built around strong spacing, clear sections, and approachable visual storytelling.",
+      "Implemented clean semantic HTML elements and native CSS grids to map fetched dynamic content seamlessly.",
     learnings: [
-      "Editorial design can make practical tools feel more inviting",
-      "Balanced whitespace helps products feel more premium",
+      "DOM rendering optimization",
+      "CSS grid placement techniques",
     ],
-    technologies: ["React", "CSS Modules"],
-    githubUrl: "https://github.com/hadia/kitchen-garden",
-    demoUrl: "",
-    featured: false,
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    githubUrl: "https://github.com/hadiashah01/bbc-news-homepage-clone",
+    demoUrl: "https://hadiashah01.github.io/bbc-news-homepage-clone/",
+    featured: true,
+    image: "/images/projects/bbc-news-placeholder.jpg",
+  },
+  {
+    slug: "the-kitchen-garden",
+    title: "The Kitchen Garden",
+    description:
+      "A premium landing page for a hospitality destination built with HTML and Tailwind CSS, featuring editorial-inspired layouts, responsive design, and modern UI components.",
+    problem:
+      "Designing a high-fidelity visual layout that mirrors modern hospitality websites.",
+    solution:
+      "Used Tailwind CSS utility classes to design editorial components, smooth spacing, and responsive headers.",
+    learnings: [
+      "Applying utility-first styling structures",
+      "Visual spacing design principles",
+    ],
+    technologies: ["HTML5", "Tailwind CSS"],
+    githubUrl: "https://github.com/hadiashah01/the-kitchen-garden",
+    demoUrl: "https://hadiashah01.github.io/the-kitchen-garden/",
+    featured: true,
     image: "/images/projects/kitchen-garden-placeholder.jpg",
+  },
+  {
+    slug: "winter-world-clone",
+    title: "Winter World Clone",
+    description:
+      "A responsive front-end recreation of the Winter World Pakistan website built with HTML and CSS to practice modern layouts, Flexbox, media queries, and responsive web design.",
+    problem:
+      "Replicating a commercial website's booking design to test layout precision.",
+    solution:
+      "Coded standard media queries and CSS layouts to support various viewport widths.",
+    learnings: [
+      "Flexbox layout alignment",
+      "Writing robust media queries",
+    ],
+    technologies: ["HTML5", "CSS3"],
+    githubUrl: "https://github.com/hadiashah01/winterworld-lahore-clone",
+    demoUrl: "https://hadiashah01.github.io/winterworld-lahore-clone/",
+    featured: true,
+    image: "/images/projects/winter-world-placeholder.jpg",
+  },
+  {
+    slug: "whatsapp-business-clone",
+    title: "WhatsApp Business Platform Clone",
+    description:
+      "A responsive front-end clone of the WhatsApp Business Platform website built with Tailwind CSS to practice modern layouts, utility-first styling, and responsive UI implementation.",
+    problem:
+      "Cloning a premium enterprise interface with precise Tailwind configuration.",
+    solution:
+      "Engineered responsive UI grids using Tailwind CSS to mimic modern business dashboards.",
+    learnings: [
+      "Tailwind configuration practices",
+      "Responsive container layout workflows",
+    ],
+    technologies: ["HTML5", "Tailwind CSS"],
+    githubUrl: "https://github.com/hadiashah01/whatsapp-business-clone-tailwind",
+    demoUrl: "https://hadiashah01.github.io/whatsapp-business-clone-tailwind",
+    featured: true,
+    image: "/images/projects/whatsapp-clone-placeholder.jpg",
   },
 ];
 

@@ -1,18 +1,14 @@
 export const skillCategories = [
   {
-    title: "Languages",
-    skills: ["HTML", "CSS", "JavaScript", "TypeScript"],
+    title: "Core Technologies",
+    skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React"],
   },
   {
-    title: "Frontend",
-    skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    title: "Styling & Frameworks",
+    skills: ["Tailwind CSS", "Bootstrap", "Responsive Web Design"],
   },
   {
-    title: "Backend",
-    skills: ["Prisma", "Supabase", "REST APIs"],
-  },
-  {
-    title: "Tools",
-    skills: ["Git", "Vercel", "Figma", "Accessibility Audits"],
+    title: "Version Control & Tools",
+    skills: ["Git", "GitHub"],
   },
 ];

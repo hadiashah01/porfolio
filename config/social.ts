@@ -7,6 +7,7 @@ export const socialLinks = {
   github: personal.github,
   linkedin: personal.linkedin,
   email: personal.email,
+  phone: personal.phone,
 };
 
 export const contactMethods = [
@@ -14,6 +15,11 @@ export const contactMethods = [
     label: "Email",
     value: personal.email,
     href: `mailto:${personal.email}`,
+  },
+  {
+    label: "Phone",
+    value: personal.phone,
+    href: `tel:${personal.phone}`,
   },
   {
     label: "GitHub",
@@ -29,7 +35,7 @@ export const contactMethods = [
 
 export const contactFormPlaceholders = {
   name: "Your name",
-  email: "you@example.com",
+  email: "your@email.com",
   subject: "What do you want to discuss?",
   message: "Share a few details about your idea or request.",
 };

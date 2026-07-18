@@ -19,6 +19,6 @@ export const footerLinks: NavItem[] = [
 ];
 
 export const dashboardNav: NavItem[] = [
-  { title: "Overview", href: "/dashboard" },
-  { title: "Messages", href: "/dashboard/messages" },
+  { title: "Dashboard", href: "/dashboard" },
+  { title: "Contact Queries", href: "/dashboard/messages" },
 ];

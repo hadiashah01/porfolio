@@ -1,5 +1,6 @@
 import { buildMetadata } from "@/config/metadata";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
+import { LoginForm } from "@/components/forms/LoginForm";
 
 export const metadata = buildMetadata({
   title: "Login",
@@ -11,12 +12,13 @@ export const metadata = buildMetadata({
 export default function LoginPage() {
   return (
     <Card className="w-full max-w-md">
-      <CardHeader>
-        <CardTitle>Login</CardTitle>
+      <CardHeader className="border-b border-border pb-4">
+        <CardTitle className="text-2xl">Admin Login</CardTitle>
         <CardDescription>
-          Authentication will be implemented in Phase 3.
+          Sign in to manage contact submissions and message queries.
         </CardDescription>
       </CardHeader>
+      <LoginForm />
     </Card>
   );
 }

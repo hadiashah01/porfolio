@@ -1,5 +1,4 @@
 import { Section } from "@/components/ui/Section";
-import { Button } from "@/components/ui/Button";
 import {
   Card,
   CardContent,
@@ -7,12 +6,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/Card";
-import { Input } from "@/components/ui/Input";
-import { Textarea } from "@/components/ui/Textarea";
 import { SectionHeading, ContactMethodList } from "@/components/sections";
 import { buildMetadata } from "@/config/metadata";
 import { contactPageContent } from "@/config/personal";
-import { contactFormPlaceholders, contactMethods } from "@/config/social";
+import { contactMethods } from "@/config/social";
+import { ContactForm } from "@/components/forms/ContactForm";
 
 export const metadata = buildMetadata({
   title: "Contact",
@@ -50,51 +48,7 @@ export default function ContactPage() {
               {contactPageContent.formDescription}
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="space-y-2">
-                <label className="text-sm font-medium" htmlFor="name">
-                  {contactPageContent.nameLabel}
-                </label>
-                <Input id="name" placeholder={contactFormPlaceholders.name} />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-medium" htmlFor="email">
-                  {contactPageContent.emailLabel}
-                </label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder={contactFormPlaceholders.email}
-                />
-              </div>
-            </div>
-            <div className="space-y-2">
-              <label className="text-sm font-medium" htmlFor="subject">
-                {contactPageContent.subjectLabel}
-              </label>
-              <Input
-                id="subject"
-                placeholder={contactFormPlaceholders.subject}
-              />
-            </div>
-            <div className="space-y-2">
-              <label className="text-sm font-medium" htmlFor="message">
-                {contactPageContent.messageLabel}
-              </label>
-              <Textarea
-                id="message"
-                placeholder={contactFormPlaceholders.message}
-              />
-            </div>
-            <Button
-              type="button"
-              variant="primary"
-              className="w-full sm:w-auto"
-            >
-              {contactPageContent.submitLabel}
-            </Button>
-          </CardContent>
+          <ContactForm />
         </Card>
       </div>
     </Section>
