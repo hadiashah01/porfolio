@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ExternalLink, Github, Mail, Linkedin, Phone } from "lucide-react";
+import { ExternalLink, Github, Mail, Linkedin, Phone } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/Button";
 import {
@@ -100,17 +100,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <ExternalLink className="h-4 w-4" aria-hidden="true" />
               Live Demo
             </Link>
-          ) : (
-            <span
-              className={cn(
-                buttonVariants({ variant: "secondary", size: "sm" }),
-                "pointer-events-none no-underline",
-              )}
-            >
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              Demo Placeholder
-            </span>
-          )}
+          ) : null}
         </div>
       </CardContent>
     </Card>

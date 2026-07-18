@@ -29,7 +29,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Prisma", "Supabase"],
     githubUrl: "https://github.com/hadiashah01/portfolio",
     demoUrl: "",
-    featured: true,
+    featured: false,
     image: "/images/projects/portfolio-placeholder.jpg",
   },
   {
@@ -124,8 +124,27 @@ export const projects: Project[] = [
     technologies: ["HTML5", "Tailwind CSS"],
     githubUrl: "https://github.com/hadiashah01/whatsapp-business-clone-tailwind",
     demoUrl: "https://hadiashah01.github.io/whatsapp-business-clone-tailwind",
-    featured: true,
+    featured: false,
     image: "/images/projects/whatsapp-clone-placeholder.jpg",
+  },
+  {
+    slug: "javascript-framework-sandbox",
+    title: "JavaScript Framework Sandbox",
+    description:
+      "Repository for experimenting with modern JavaScript frameworks in one organized workspace.",
+    problem:
+      "Need a unified workspace to explore and compare different JavaScript frameworks and libraries.",
+    solution:
+      "Created an organized repository with structured experiments for various modern JS frameworks.",
+    learnings: [
+      "Understanding different JavaScript framework paradigms",
+      "Organizing multi-framework projects in a monorepo structure",
+    ],
+    technologies: ["JavaScript", "React", "TypeScript"],
+    githubUrl: "https://github.com/hadiashah01/javascript-framework-sandbox",
+    demoUrl: "",
+    featured: true,
+    image: "/images/projects/sandbox-placeholder.jpg",
   },
 ];
 

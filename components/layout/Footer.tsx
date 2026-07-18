@@ -29,7 +29,7 @@ export function Footer() {
           ))}
         </nav>
 
-        <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foregroundspace-y-2 text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
           <a
             href={siteConfig.links.github}
             className="transition-colors hover:text-foreground"
