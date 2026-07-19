@@ -14,7 +14,7 @@ A production-ready personal portfolio and internship project built with **Next.j
 - [Deployment](#deployment)
 - [Internship Project](#internship-project)
 - [Documentation](#documentation)
-- [License](#license)
+- [License](#licence)
 
 ## Live Demo
 
